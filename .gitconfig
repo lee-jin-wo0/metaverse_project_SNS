@@ -1,0 +1,10 @@
+[core]
+	editor = \"C:\\Users\\leeji\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	autocrlf = true
+[user]
+	name = LeeJinWoo
+	email = leejinwo0@naver.com
+[init]
+	defaultBranch = main
+[push]
+	default = current
