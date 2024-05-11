@@ -1,0 +1,103 @@
+<%-include('head.ejs')-%>
+<!-- End of head -->
+<%-include('header.ejs')-%>
+<!-- End of header -->
+
+<!-- 
+    메인페이지
+    1.접속할 때 로그인 정보가 없다면 로그인 페이지로 이동 (자동로그인 기능?)
+    2.무한스크롤 게시글
+    3.좌측 네비게이션 기능(#디테일 미정#)
+-->
+
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="../img/banner01.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../img/banner02.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../img/banner03.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../img/banner01.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../img/banner02.png" />
+        </div>
+        <div class="swiper-slide">
+            <img src="../img/banner03.png" />
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev">
+        <div class="material-symbols-outlined">arrow_back</div>
+    </div>
+    <div class="swiper-button-next">
+        <div class="material-symbols-outlined">arrow_forward</div>
+    </div>
+    <div class="swiper-scollbar"></div>
+ </div>
+
+ <script>
+    new Swiper('.swiper', {
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false // 사용자 상호 작용 후에도 자동 재생 유지
+        },
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        watchOverflow:true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        }
+    })
+ </script>
+
+<div class="mainBox alignment">
+    <div class="navBox">
+        <div class="searching">
+            <form action="/main?search=">
+                <input type="text" name="search" placeholder="검색하기">
+                <button type="submit">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="postBox">
+        <% posts.forEach(function(post) { %>
+            <%- include('aPost', {post: post}); %>
+        <% }); %>
+        
+    </div>
+    <div class="popularBox">
+        <div class="popularPost">
+            <p>인기 게시글</p>
+            <ol>
+                <li>인기1</li>
+                <li>인기2</li>
+                <li>인기3</li>
+                <li>인기4</li>
+                <li>인기5</li>
+                <li>인기6</li>
+                <li>인기7</li>
+                <li>인기8</li>
+                <li>인기9</li>
+                <li>인기10</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Start of footer -->
+<%-include('footer.ejs')-%>

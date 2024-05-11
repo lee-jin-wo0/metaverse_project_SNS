@@ -1,0 +1,34 @@
+<header class="alignment">
+
+<!-- 
+    헤더
+    1.메인페이지로 이동할 수 있는 로고
+    2.네비게이션 기능? (글쓰기, 계정정보, 설정, 등...)
+-->
+
+<div class="moveIndex">
+    <a href="/main"><img src="../img/MZDRN_logo_row_removeBG.png" alt=""></a>
+</div>
+<div class="headerMenu">
+    <div class="darkMode" id="darkmode">
+        <label>
+            <span>다크모드</span>
+            <input role="switch" type="checkbox" />
+        </label>
+    </div>
+    <a href="/profile" id="moveProfile"><span class="material-symbols-outlined">person</span></a>
+<!--드롭다운 메뉴를 만들겁니당 ㅎ-->
+    <div class="dropdown"> <!--div1-->
+        <button class="dropbtn">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+        <div class="dropdown-content"> <!--div2-->
+            <a href="/writingPost"><span class="material-symbols-outlined">edit_document</span>게시글 작성</a>
+            <a href="#"><span class="material-symbols-outlined">edit_note</span>게시글 수정</a>
+            <a href="#"><span class="material-symbols-outlined">contract_delete</span>게시글 삭제</a>
+            <a href="#"><span class="material-symbols-outlined">variable_remove</span>댓글 삭제</a>
+        </div>
+    </div>
+</div>
+
+</header>

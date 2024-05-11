@@ -1,0 +1,58 @@
+<%-include('head.ejs')-%>
+<!-- End of head -->
+<%-include('header.ejs')-%>
+<!-- End of header -->
+
+<!-- 
+    계정 정보 확인
+    DB에서 정보 불러오기
+    1.이름/닉네임
+    2.소개글
+    3.작성한 게시글
+    4.프로필 사진  
+    5.'수정하기' 버튼 추가 (editProfile 이동)
+-->
+
+<div class="profileBox alignment">
+    <div class="profileInfo">
+        <div class="imgProfile alignment">
+            <!-- 조회된 다른 사용자의 프로필 이미지 -->
+            <img src="<%= otherUser.profile_image %>" alt="">
+        </div>
+        <div class="name alignment">
+            <!-- 조회된 다른 사용자의 이름 -->
+            <p><%= otherUser.user_name %></p>
+        </div>
+        <div class="followInfo alignment">
+            <!-- 팔로우/팔로잉 정보, 실제 데이터베이스 연동이 필요한 부분 -->
+            <div class="follow">
+                <p>팔로우   <span>0</span></p>
+            </div>
+            <div class="following">
+                <p>팔로잉   <span>0</span></p>
+            </div>
+        </div>
+        <div class="follow_edit alignment">
+            <!-- 팔로우 버튼, 실제 기능 구현 필요 -->
+            <a href="#">팔로우</a>
+        </div>
+        <div class="introduceText">
+            <!-- 조회된 다른 사용자의 소개 및 이메일 -->
+            <table>
+                <tr><td><%= otherUser.introduce %></td></tr>
+                <tr><td><%= otherUser.email %></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="myPost">
+        <p>작성한 게시글</p>
+        <!-- 게시글 시작 -->
+        
+        <!-- 게시글 끝 -->
+    </div>
+    <div class="profileEmptyBox"></div>
+</div>
+
+
+<!-- Start of footer -->
+<%-include('footer.ejs')-%>

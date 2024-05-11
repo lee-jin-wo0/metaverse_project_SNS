@@ -1,0 +1,48 @@
+/* Custom properties */
+:root {
+    --darkGray: #3c3c3c;
+    --gray: #5e5e5e;
+    --lightGray: #a0a0a0;
+    --signatureColor: #1C233A;
+    --headerBackground: #1C233A;
+    --headerIconColor: #fff;
+    /* 기본은 다크모드 */
+    --bodyColor: #1C233A;
+    --boxColor: #1A2A63;
+    --textColor1: white;
+    --textColor2: white;
+}
+:root[color-theme="dark"] {
+    --headerBackground: #1C233A;
+    --headerIconColor: #fff;
+    --bodyColor: #1C233A;
+    --boxColor: #1A2A63;
+    --textColor1: white;
+    --textColor2: white;
+}
+:root[color-theme="light"] {
+    --headerBackground: white;
+    --headerIconColor: black;
+    --bodyColor: white;
+    --boxColor: #BFBFBF;
+    --textColor1: white;
+    --textColor2: black;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: var(--bodyColor); /* 다크모드 영향 */
+}
+.alignment {
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+}
+.width100 {
+    width: 100%;
+}
+.emptyBox { 
+    width: 25%;
+    margin: 0 auto;
+}

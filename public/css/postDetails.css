@@ -1,0 +1,88 @@
+.postDetailBox {
+    margin-top: var(--headerSize);
+    margin-bottom: var(--headerSize);
+}
+.postInfo {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    color:var(--textColor1);
+}
+.detailUser {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+.detail {
+    width: 90%;
+    background-color: var(--boxColor);
+    /*border: 0.6px solid black;*/
+    border-radius: 15px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow-wrap: break-word;
+}
+.separateLine {
+    width: 90%;
+    margin: 0 auto 0 auto;
+    border: 1px solid var(--signatureColor);
+}
+.detailComments {
+    color:var(--textColor1);
+}
+.detailComments table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+.detailComments table td {
+    width: 90%;
+    background-color: var(--boxColor);
+    /*border: 0.6px solid black;*/
+    border-radius: 15px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+.loadComments {
+    display: flex;
+    width: 100%;
+}
+.loadCommentsImg {
+    margin-right: 10px;
+}
+.loadCommentsImg img{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--signatureColor);
+    border-radius: 50%;
+}
+.loadCommentsInfo {
+    width: 100%;
+}
+.loadCommentsText {
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.separateLine2 {
+    width: 100%;
+    border: 1px solid var(--signatureColor);
+    margin-top: 5px;
+}
+
+.callPostTitle {
+    padding-bottom: 5px;
+}
+
+.callPostText { 
+    padding-top: 5px;
+}
+
+.callPostHashtag {
+    padding-top: 5px;
+}

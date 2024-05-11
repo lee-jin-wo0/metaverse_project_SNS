@@ -1,0 +1,32 @@
+<%-include('head.ejs')-%>
+<!-- End of head -->
+<%-include('header.ejs')-%>
+<!-- End of header -->
+
+<!-- 
+    게시글 작성하기
+    1.제목, 코드, 결과값, 태그를 입력하면 DB에 저장, postDetails에 불러올 수 있어야함.
+    2.작성자 정보와 게시글 정보를 DB에 저장 -> DB설계
+    3.'작성하기'버튼 추가
+-->
+
+<div class="writingPostBox alignment">
+    <div class="emptyBox"></div>
+    <div class="writingPost">
+        <form action="/writingPost" method="post">
+            <input type="text" id="title" name="title" placeholder="제목">
+            <input type="text" id="hashtags" name="hashtags" placeholder="태그">
+            <textarea id="content" name="content" rows="9" placeholder="내용"></textarea>
+            <textarea id="compileInput" name="compileInput" rows="9" placeholder="코드"></textarea>
+            <textarea id="compileOutput" name="compileOutput" rows="9" placeholder="결과 출력"></textarea>
+            <div class="writingBT">
+                <button type="">컴파일</button>
+                <button type="submit">작성</button>
+            </div>
+        </form>
+    </div>
+    <div class="emptyBox"></div>
+</div>
+
+<!-- Start of footer -->
+<%-include('footer.ejs')-%>

@@ -1,0 +1,134 @@
+:root {
+    --headerSize: 66px;
+    --headerIconSize: 50px;
+    --headerIconColor: #fff;
+    --headerBackground: #1C233A;
+    --headerBgWhite:#fff;
+    --headerFontSize: 18px;
+    --boxColor: #1A2A63;
+}
+header {
+    z-index: 10;
+    margin: 0;
+    width: 100%;
+    height: var(--headerSize);
+    background-color: var(--headerBackground);
+    position: fixed;
+    top: 0;
+    left: 0;   
+}
+.moveIndex img {
+    height: calc(var(--headerSize));
+    position: absolute;
+    left: 10px;
+}
+.headerMenu {
+    position: absolute;
+    right: 0px;
+    color: var(--headerIconColor);
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    gap: 10px;
+    user-select: none; /* 텍스트 선택 차단 */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* 인터넷익스플로러 */
+}
+.headerMenu > a > span{
+    font-size: calc(var(--headerIconSize) - 25px);
+    line-height: var(--headerSize);
+    color: var(--headerIconColor);
+}
+/*토글 스위치*/
+.darkMode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 15px;
+}
+.darkMode label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+#darkmode [type="checkbox"] {
+    appearance: none;
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--boxColor);
+    width: 60px;
+    height: 30px;
+}
+#darkmode [type="checkbox"]::before {
+    content: "ON";
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--headerBackground);
+    transform: scale(0.8);
+    transition: left 250ms linear;
+}
+#darkmode [type="checkbox"]:checked::before {
+    content: "OFF";
+    background-color: var(--signatureColor);
+    left: 30px;
+}
+
+/*--------드롭다운 메뉴------*/
+.dropdown{
+    position : relative;
+    display : inline-block;
+  }
+  
+  .dropbtn_icon{
+    font-family : 'Material Icons';
+  }
+  .dropbtn{
+    /*border : 1px solid rgb(37, 37, 37);
+    border-radius : 4px;*/
+    background-color: var(--headerBackground);
+    font-weight: 400;
+    /*color : rgb(37, 37, 37);*/
+    padding : 12px;
+    /*width :200px;*/
+    text-align: right;
+    cursor : pointer;
+    font-size : 12px;
+    border:none;
+    margin-top: 10px;
+    color:var(--textColor2)
+  }
+  .dropdown-content{
+    display : none;
+    position : absolute;
+    z-index : 1; /*다른 요소들보다 앞에 배치*/
+    font-weight: 400;
+    background-color: var(--headerBackground);
+    color:var(--textColor2); opacity: 0.9;
+    min-width : 200px;
+    right: 0;
+  }
+  
+  .dropdown-content a{
+    display : block;
+    text-decoration : none;
+    color : var(--textColor2);
+    font-size: 12px;
+    padding : 12px 20px;
+  }
+  
+  .dropdown-content a:hover{
+    background-color : var(--boxColor);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
